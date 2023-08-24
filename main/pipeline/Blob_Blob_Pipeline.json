@@ -59,6 +59,22 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "SP",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "Blob Copy data Blob",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
 			}
 		],
 		"annotations": []
